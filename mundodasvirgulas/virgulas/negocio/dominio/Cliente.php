@@ -1,22 +1,22 @@
 
 <?php 
 
-class Cliente {
+class Usuario {
 
 	public $codigo;
 	public $nome;
-	public $cpf;
+	public $idade;
 	
-	public function __construct($nome = null, $cpf = null, $codigo = null){
+	public function __construct($nome = null, $idade = null, $codigo = null){
 		$this->nome = $nome;
-		$this->cpf = $cpf;
+		$this->idade = $idade;
 		$this->codigo = $codigo;
 	}
 		
 	public function pegarDados(){
 		
 		$this->nome = $_GET["nome"];
-		$this->cpf = $_GET["cpf"];
+		$this->idade = $_GET["idade"];
 	}
 	
 	public function validarDados(){
