@@ -1,21 +1,21 @@
 
 <?php
 
-require_once("../../persistencia/ClienteDAO.php");
-require_once("../dominio/Cliente.php");
+require_once("../../persistencia/UsuarioDAO.php");
+require_once("../dominio/Usuario.php");
 
-$banco = new ClienteDAO();
-$cliente = new Cliente();
+$appmundodasvirgulas = new UsuarioDAO();
+$Usuario = new Usuario();
 
-$cliente->pegarDados();
-$cliente->validarDados();
+$Usuario->pegarDados();
+$Usuario->validarDados();
 
 
 
-$banco->inserir($cliente);
+$appmundodasvirgulas->inserir($Usuario);
 
-foreach ($banco->selecionarTodos() as $registro) {
-	echo "Codigo : ". $registro["cod_cliente"] . " | Nome : ". $registro["nome"] ." | CPF : ". $registro["cpf"] ." <br /> ";
+foreach ($appmundodasvirgulas->selecionarTodos() as $registro) {
+	echo "Codigo : ". $registro["cod_Usuario"] . " | Nome : ". $registro["nome"] ." | IDADE : ". $registro["idade"] ." <br /> ";
 };
 
 
