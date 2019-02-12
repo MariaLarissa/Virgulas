@@ -1,20 +1,20 @@
 create database web_bank;
-use web_bank;
+use mundodasvirgulas;
 
-create table clientes (
-cod_cliente int auto_increment,
+create table usuario (
+cod_usuario int auto_increment,
 nome varchar(255),
-cpf char(11),
-primary key (cod_cliente)
+idade int(3),
+primary key (cod_usuario)
 );
 
-insert into clientes (nome,cpf)
-values ('fabio',11111111111),
-('Joao', 22222222222),
-('Luana',33333333333),
-('Fê',44444444444),
-('Ailton',55555555555);
+insert into usuarios (nome,idade)
+values ('fabio',11),
+('Joao', 22),
+('Luana',33),
+('Fê',44),
+('Ailton',55);
 
-select * from clientes;
+select * from usuarios;
 
-drop database web_bank;
+drop database mundodasvirgulas;
